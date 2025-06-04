@@ -1,3 +1,4 @@
+#include <cstdlib>
 #include <iostream>
 #include "menu.h"
 #include "menu_ejercicios.h"
@@ -7,7 +8,7 @@ using std::cout;
 using std::cin;
 
 void Menu::borrar_pantalla() {
-    cout << "\033[2J\033[1;1H";
+    std::system("clear"); // colocar cls dentro de "" si estas en windows
 }
 
 void Menu::pausar_borrar() {
