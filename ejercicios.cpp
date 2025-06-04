@@ -298,6 +298,7 @@ void Ejercicios::decimo_sexto_ejercicio() {
     string datos[5];
     string datos_reverso[5];
     std::stack<string> reversor;
+    cin.ignore();
 
     for (int i = 0; i < 5; i++) {
         cout << "Introduce el dato " <<"["<<i+1<<"]: ";
