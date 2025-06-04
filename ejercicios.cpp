@@ -23,7 +23,7 @@ void Ejercicios::primer_ejercicio() {
         }
     }
     
-    cout << "\n";
+    cout << "\n\n";
     cout << "Hay " << contador << " numeros impares entre 1 y 60" << "\n";
 
 }
@@ -39,7 +39,7 @@ void Ejercicios::segundo_ejercicio() {
         }
     }
 
-    cout << "\n";
+    cout << "\n\n";
     cout << "Hay " << contador << " numeros pares entre 250 y 5" << "\n";
 }
 
@@ -145,10 +145,11 @@ void Ejercicios::sexto_ejercicio() {
             contador++;
             acumulador += numero;
         }
-        cout << "\n";
         numero++;
-        cout << "Acumulador: " << acumulador << std::endl;
     }
+    cout << "\n\n";
+    cout << "Acumulador: " << acumulador << std::endl;
+
 }
 
 void Ejercicios::septimo_ejercicio() {
@@ -164,7 +165,7 @@ void Ejercicios::septimo_ejercicio() {
         
         
     }
-    cout << "\n";
+    cout << "\n\n";
     cout << "son " << contador << " los numeros impares" << "\n";
     cout << "su sumatoria es " << sumatoria << "\n";
 }
