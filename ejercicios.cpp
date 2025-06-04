@@ -18,7 +18,7 @@ void Ejercicios::primer_ejercicio() {
     
     for(int i = 1; i < 60; i++) {
         if(i % 2 != 0) {
-            cout << i << "\n";
+            cout << i << " ";
             contador++;
         }
     }
@@ -33,7 +33,7 @@ void Ejercicios::segundo_ejercicio() {
 
     for(int i = 250; i > 5; i--) {
         if(i % 2 == 0) {
-            cout << i << "\n";
+            cout << i << " ";
             contador++;
 
         }
@@ -141,11 +141,13 @@ void Ejercicios::sexto_ejercicio() {
 
     while(contador < 100 ) {
         if (numero % 2 != 0) {
-            cout << numero << "\n";
+            cout << numero << " ";
             contador++;
             acumulador += numero;
         }
+        cout << "\n";
         numero++;
+        cout << "Acumulador: " << acumulador << std::endl;
     }
 }
 
@@ -153,17 +155,17 @@ void Ejercicios::septimo_ejercicio() {
     int contador = 0;
     int sumatoria = 0;
 
-    for (int i = 0; i < 600; i++) {
+    for (int i = 0; i < 300; i++) {
         if (i % 2 != 0) {
-            cout << i << "\n";
+            cout << i << " ";
             contador++;
             sumatoria += i;
         }
         
         
     }
-
-    cout << "son " << contador << " los primeros 300 numeros impares" << "\n";
+    cout << "\n";
+    cout << "son " << contador << " los numeros impares" << "\n";
     cout << "su sumatoria es " << sumatoria << "\n";
 }
 
@@ -171,9 +173,6 @@ void Ejercicios::octavo_ejercicio() {
     int numero;
     cout << "Ingrese un numero entre 1 y 12: ";
     cin >> numero;
-
-    
-
 
    if (numero <= 12 && numero >= 1) {
     
@@ -188,7 +187,7 @@ void Ejercicios::octavo_ejercicio() {
 void Ejercicios::noveno_ejercicio() {
     for (int i = 1; i <= 12; i++) {
         for (int j = 1; j <= 12; j++) {
-            cout << i << " \033[35m*\033[0m " << j << " \033[34m=\033[0m " << i * j << "\n";
+            cout << i << " * " << j << " = " << i * j << "\n";
         }
         cout << "\n";
     }
