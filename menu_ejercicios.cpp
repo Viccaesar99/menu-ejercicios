@@ -9,7 +9,9 @@ using std::cin;
 void MenuEjercicios::menu_ejercicios() {
     int opcion;
     while(opcion != 15) {
+
         Menu::borrar_pantalla();
+
         cout << "  Menu de ejercicios" << "\n";
         cout << "------------------------" << "\n";
         cout << "1)\tImpares del 1 al 60" << "\n";
@@ -31,89 +33,94 @@ void MenuEjercicios::menu_ejercicios() {
         cout << "Ingrese una opcion: ";
         cin >> opcion;
 
+        Menu::borrar_pantalla();
+
         switch (opcion) {
             case 1:
-                Menu::borrar_pantalla();
+
                 Ejercicios::primer_ejercicio();
-                Menu::pausar_borrar();
+
                 break;
             case 2:
-                Menu::borrar_pantalla();
+
                 Ejercicios::segundo_ejercicio();
-                Menu::pausar_borrar();
+
                 break;
             case 3:
-                Menu::borrar_pantalla();
+
                 Ejercicios::tercer_ejercicio();
-                Menu::pausar_borrar();
+
                 break;
             case 4:
-                Menu::borrar_pantalla();
+
                 Ejercicios::cuarto_ejercicio();
-                Menu::pausar_borrar();
+
                 break;   
             case 5:
-                Menu::borrar_pantalla();
+
                 Ejercicios::quinto_ejercicio();
-                Menu::pausar_borrar();
+
                 break;  
             case 6:
-                Menu::borrar_pantalla();
+
                 Ejercicios::sexto_ejercicio();
-                Menu::pausar_borrar();
+
                 break; 
             case 7:
-                Menu::borrar_pantalla();
+
                 Ejercicios::septimo_ejercicio();
-                Menu::pausar_borrar();
+
                 break;
             case 8:
-                Menu::borrar_pantalla();
+
                 Ejercicios::octavo_ejercicio();
-                Menu::pausar_borrar();
+
                 break;
             case 9:
-                Menu::borrar_pantalla();
+
                 Ejercicios::noveno_ejercicio();
-                Menu::pausar_borrar();
+
                 break;
             case 10:
-                Menu::borrar_pantalla();
+
                 Ejercicios::decimo_ejercicio();
-                Menu::pausar_borrar();
+
                 break;   
             case 11:
-                Menu::borrar_pantalla();
+
                 Ejercicios::undecimo_ejercicio();
-                Menu::pausar_borrar();
+
                 break;      
             case 12:
-                Menu::borrar_pantalla();
+
                 Ejercicios::duodecimo_ejercicio();
-                Menu::pausar_borrar();
+
                 break; 
 
             case 13:
-                Menu::borrar_pantalla();
+
                 Ejercicios::decimo_tercer_ejercicio();
-                Menu::pausar_borrar();
+
                 break;      
 
             case 14:
-                Menu::borrar_pantalla();
+
                 Ejercicios::decimo_cuarto_ejercicio();
-                Menu::pausar_borrar();
+
                 break;
 
             case 15:
-                Menu::borrar_pantalla();
-                cout << "Saliendo..." << "\n";
                 break;
             default:
                 cout << "Opcion fuera del rango" << "\n";
-                Menu::pausar_borrar();
+
                 break;
 
-        }        
+
+        } 
+        if (opcion != 15) {
+            Menu::pausar_borrar();
+
+        }
     }
 }

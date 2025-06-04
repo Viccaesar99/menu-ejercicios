@@ -29,21 +29,20 @@ void Menu::mostrar_menu() {
         cout << "--------------" << "\n";
         cout << "Seleccione una opcion: ";
         cin >> opcion;
+        Menu::borrar_pantalla();
         switch (opcion) {
-            case 1:
-                borrar_pantalla();
+            case 1: 
                 MenuEjercicios::menu_ejercicios();
-                Menu::pausar_borrar();
                 break;
             case 2:
-                cout << "saliendo" << "\n";
-                Menu::pausar_borrar();
                 break;
             default:
                 cout << "Seleccione una opcion valida";
-                Menu::pausar_borrar();
                 break;
         
+        }
+        if (opcion != 2) {
+            Menu::pausar_borrar();
         }
     }
 }
