@@ -8,28 +8,36 @@ using std::cin;
 
 void MenuEjercicios::menu_ejercicios() {
     int opcion;
-    while(opcion != 15) {
+    while(opcion != 22) {
 
         Menu::borrar_pantalla();
 
-        cout << "  Menu de ejercicios" << "\n";
-        cout << "------------------------" << "\n";
-        cout << "1)\tImpares del 1 al 60" << "\n";
-        cout << "2)\tPares descendentes del 250 al 5" << "\n";
-        cout << "3)\tMayor o menor" << "\n";
-        cout << "4)\tSumatoria promedio e itbis" << "\n";
-        cout << "5)\tMayor menor y medio" << "\n";
-        cout << "6)\timpares acumulador" << "\n";
-        cout << "7)\timpares sumatoria" << "\n";
-        cout << "8)\tTabla de multiplicar" << "\n";
-        cout << "9)\tTablas de multiplicar" << "\n";
-        cout << "10)\tdeterminar edad" << "\n";
-        cout << "11)\tprimeros cien pares" << "\n";
-        cout << "12)\tpares descendentes del 260 al 10" << "\n";
-        cout << "13)\ttabla de multiplicar descendente" << "\n";
-        cout << "14)\traiz cuadrada" << "\n";
-        cout << "15)\tSalir" << "\n";
-        cout << "------------------------" << "\n";
+        cout << "--------------------------------------------" << "\n";
+        cout << "|           Menu de ejercicios             |" << "\n";
+        cout << "--------------------------------------------" << "\n";
+        cout << "| 1) Impares del 1 al 60                   |" << "\n";
+        cout << "| 2) Pares descendentes del 250 al 5       |" << "\n";
+        cout << "| 3) Mayor o menor                         |" << "\n";
+        cout << "| 4) Sumatoria promedio e itbis            |" << "\n";
+        cout << "| 5) Mayor menor y medio                   |" << "\n";
+        cout << "| 6) impares acumulador                    |" << "\n";
+        cout << "| 7) impares sumatoria                     |" << "\n";
+        cout << "| 8) Tabla de multiplicar                  |" << "\n";
+        cout << "| 9) Tablas de multiplicar                 |" << "\n";
+        cout << "| 10) determinar edad                      |" << "\n";
+        cout << "| 11) primeros cien pares                  |" << "\n";
+        cout << "| 12) pares descendentes del 260 al 10     |" << "\n";
+        cout << "| 13) tabla de multiplicar descendente     |" << "\n";
+        cout << "| 14) raiz cuadrada                        |" << "\n";
+        cout << "| 15) Cuadrado y cubo de numeros aleatorios|" << "\n";
+        cout << "| 16) Invertir vector de cadenas           |" << "\n";
+        cout << "| 17) Promedio, maximo y minimo de notas   |" << "\n";
+        cout << "| 18) Rellenar vector hasta dato negativo  |" << "\n";
+        cout << "| 19) Aleatorios ordenados                 |" << "\n";
+        cout << "| 20) Identificar meses                    |" << "\n";
+        cout << "| 21) Sumar vectores                       |" << "\n";
+        cout << "| 22) Salir                                |" << "\n";
+        cout << "--------------------------------------------" << "\n";
         cout << "Ingrese una opcion: ";
         cin >> opcion;
 
@@ -37,90 +45,99 @@ void MenuEjercicios::menu_ejercicios() {
 
         switch (opcion) {
             case 1:
-
                 Ejercicios::primer_ejercicio();
-
                 break;
+
             case 2:
-
                 Ejercicios::segundo_ejercicio();
-
                 break;
+
             case 3:
-
                 Ejercicios::tercer_ejercicio();
-
                 break;
+
             case 4:
-
                 Ejercicios::cuarto_ejercicio();
+                break;
 
-                break;   
             case 5:
-
                 Ejercicios::quinto_ejercicio();
+                break;
 
-                break;  
             case 6:
-
                 Ejercicios::sexto_ejercicio();
-
                 break; 
             case 7:
-
                 Ejercicios::septimo_ejercicio();
-
                 break;
+
             case 8:
-
                 Ejercicios::octavo_ejercicio();
-
                 break;
+
             case 9:
-
                 Ejercicios::noveno_ejercicio();
-
                 break;
+
             case 10:
-
                 Ejercicios::decimo_ejercicio();
+                break;
 
-                break;   
             case 11:
-
                 Ejercicios::undecimo_ejercicio();
+                break;
 
-                break;      
             case 12:
-
                 Ejercicios::duodecimo_ejercicio();
-
                 break; 
 
             case 13:
-
                 Ejercicios::decimo_tercer_ejercicio();
-
                 break;      
 
             case 14:
-
                 Ejercicios::decimo_cuarto_ejercicio();
-
                 break;
 
             case 15:
+                Ejercicios::decimo_quinto_ejercicio();
                 break;
+
+            case 16:
+                Ejercicios::decimo_sexto_ejercicio();
+                break;
+
+            case 17:
+                Ejercicios::decimo_septimo_ejercicio();
+                break;
+
+            case 18:
+                Ejercicios::decimo_octavo_ejercicio();
+                break;
+
+            case 19:
+                Ejercicios::decimo_noveno_ejercicio();
+                break;
+
+            case 20:
+                Ejercicios::vigesimo_ejercicio();
+                break;
+
+            case 21:
+                Ejercicios::vigesimo_primer_ejercicio();
+                break;
+
+            case 22:
+                break;
+
             default:
                 cout << "Opcion fuera del rango" << "\n";
-
                 break;
 
-
         } 
-        if (opcion != 15) {
-            Menu::pausar_borrar();
 
+        if (opcion != 22) {
+            Menu::pausar_borrar();
         }
     }
 }

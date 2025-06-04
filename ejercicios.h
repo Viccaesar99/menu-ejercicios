@@ -16,6 +16,14 @@ namespace Ejercicios {
     void duodecimo_ejercicio();
     void decimo_tercer_ejercicio();
     void decimo_cuarto_ejercicio();
+    void decimo_quinto_ejercicio();
+    void decimo_sexto_ejercicio();
+    void decimo_septimo_ejercicio();
+    void decimo_octavo_ejercicio();
+    void decimo_noveno_ejercicio();
+    void vigesimo_ejercicio();
+    void vigesimo_primer_ejercicio();
+
 }
 
 

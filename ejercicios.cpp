@@ -1,9 +1,17 @@
 #include "ejercicios.h"
 #include <iostream>
 #include <cmath>
+#include <cstdlib>
+#include <ctime>
+#include <string>
+#include <stack>
+#include <algorithm>
+#include <vector>
+#include <cstddef>
 
 using std::cout;
 using std::cin;
+using std::string;
 
 void Ejercicios::primer_ejercicio() {
     int contador = 0;
@@ -77,7 +85,7 @@ void Ejercicios::cuarto_ejercicio() {
 }
 
 void Ejercicios::quinto_ejercicio() {
-    int mayor, menor, medio;
+    int mayor = 0, menor = 0, medio = 0;
     int a, b, c;
 
     cout << "Ingrese el primer numero: ";
@@ -267,4 +275,183 @@ void Ejercicios::decimo_cuarto_ejercicio() {
     raiz = sqrt(num);
     cout << "\n";
     cout << "La raiz cuadrada de " << num << " es " << raiz << "\n";
+}
+
+void Ejercicios::decimo_quinto_ejercicio() {
+    srand(time(NULL));
+    int vector_numeros[10];
+    int numero;
+
+    for (int i = 0; i < 10; i++) {
+        numero = 1 + (rand() % 10);
+        vector_numeros[i] = numero;
+        std::cout <<"Numero: "<< vector_numeros[i] << " ";
+        std::cout <<"Cuadrado: "<< std::pow(vector_numeros[i], 2) << " ";
+        std::cout <<"Cubo: "<< std::pow(vector_numeros[i], 3) << " ";
+        std::cout << "\n";
+    }
+
+    std::cout << std::endl;
+}
+
+void Ejercicios::decimo_sexto_ejercicio() {
+    string datos[5];
+    string datos_reverso[5];
+    std::stack<string> reversor;
+
+    for (int i = 0; i < 5; i++) {
+        cout << "Introduce el dato " <<"["<<i+1<<"]: ";
+        std::getline(cin, datos[i]);
+        reversor.push(datos[i]);
+
+    }
+    
+    for (int i = 0; i < 5; i++) {
+        datos_reverso[i] = reversor.top();
+        reversor.pop();
+    }
+    cout << "\n";
+
+    cout << "Vector Normal: ";
+    for (string dato: datos) {
+        cout << dato << ", ";
+    }
+    cout << "\n";
+
+    cout << "Vector inverso: ";
+    for (string dato : datos_reverso) {
+        cout << dato << ", ";
+    }
+    cout << std::endl;
+}
+
+void Ejercicios::decimo_septimo_ejercicio() {
+    int notas[5];
+    float nota_media;
+    int n;
+    
+    for (int i = 0; i < 5; i++) {
+        cout << "Ingrese su nota " <<i+1<<": ";
+        cin >> notas[i];
+        if (notas[i] > 10 || notas[i] < 0) {
+            std::cerr << "Nota ha excedido el rango 0 - 10" << std::endl;
+            return;
+        }
+    } 
+    
+    cout << "\n";
+    cout << "Notas: ";
+    for (int nota : notas) {
+        cout << nota << ", ";
+        nota_media += nota;
+    }
+    cout << "\n";
+    nota_media /= 5;
+    cout << "Nota media: " << nota_media << "\n";
+
+    n = sizeof(notas) / sizeof(notas[0]);
+    std::sort(notas, notas + n);
+
+    cout << "Nota mas alta: " << notas[4] << "\n";
+    cout << "Nota mas baja: " << notas[0] << std::endl;
+}
+
+void Ejercicios::decimo_octavo_ejercicio() {
+    std::vector<int> numeros;
+    int num;
+
+    cout << "Ingrese diez numeros enteros" << "\n";
+    for (int i = 0; i < 10; i++) {
+        cout << "["<<i+1<<"]: ";
+        cin >> num;
+        numeros.push_back(num);
+        if (num < 0) {
+            break;
+        }
+    }
+
+    cout << "\n";
+    cout << "Numeros: ";
+    for (int num : numeros) {
+        if (num >= 0) {
+            cout << num << ", ";
+        }
+    }
+    cout << std::endl;
+}
+
+void Ejercicios::decimo_noveno_ejercicio() {
+    srand(time(NULL));
+    int num_aleatorio;
+    int vector_numeros[8];
+    int n;
+
+    for (int i = 0; i < 8; i++) {
+        num_aleatorio = 1 + (rand() % 50);
+        vector_numeros[i] = num_aleatorio;
+    }
+    cout << "Vector normal: ";
+    for (int num : vector_numeros) {
+        cout << num << ", ";
+    }
+    cout << "\n";
+    n = sizeof(vector_numeros) / sizeof(vector_numeros[0]);
+
+    std::sort(vector_numeros, vector_numeros + n);
+    
+    cout << "Vector ordenado: ";
+    for (int num : vector_numeros) {
+        cout << num << ", ";
+    }
+
+    cout << std::endl;
+}
+
+void Ejercicios::vigesimo_ejercicio() {
+    const std::string meses[12] = {"Enero", "Febrero", "Marzo", 
+                                    "Abril", "Mayo", "Junio", 
+                                    "Julio", "Agosto", "Septiembre", 
+                                    "Octubre", "Noviembre", "Diciembre"};
+
+    const int dias[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    int num;
+
+    cout << "Ingrese el numero del mes: ";
+    cin >> num;
+    if (num > 12 || num < 1) {
+        std::cerr << "Numero fuera del rango 1 - 12" << "\n";
+        return;
+    }
+
+    cout << "\n";
+    cout << "Mes: " << meses[num-1] << "\n";
+    cout << "Dias: " << dias[num-1] << "\n";
+}
+
+void Ejercicios::vigesimo_primer_ejercicio() {
+    int vector_1[5], vector_2[5], vector_3[5];
+
+    cout << "Ingrese los valores del primero vector" << "\n";
+    for (int i = 0; i < 5; i++) {
+        cout << "Ingrese el dato [" <<i+1<< "]: ";
+        cin >> vector_1[i];
+    }
+    cout << "\n";
+    
+    cout << "Ingrese los valores para el segundo vector" << "\n";
+    for (int i = 0; i < 5; i++){
+        cout << "Ingrese el dato [" <<i+1<< "]: ";
+        cin >> vector_2[i];
+    }
+    cout << "\n";
+
+    for (int i = 0; i < 5; i++) {
+        vector_3[i] = vector_1[i] + vector_2[i];
+    }
+    cout << "Resultado: ";
+    for (int num: vector_3) {
+        cout << num << " ";
+
+    }
+    cout << std::endl;
 }

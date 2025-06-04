@@ -8,7 +8,7 @@ using std::cout;
 using std::cin;
 
 void Menu::borrar_pantalla() {
-    std::system("clear"); // colocar cls dentro de "" si estas en windows
+    std::system("clear || cls"); // colocar cls dentro de "" si estas en windows
 }
 
 void Menu::pausar_borrar() {
@@ -22,11 +22,12 @@ void Menu::mostrar_menu() {
     int opcion;
     while (opcion != 2) {
         Menu::borrar_pantalla();
-        cout << "Menu principal" << "\n";
-        cout << "--------------" << "\n";
-        cout << "1) Ejercicios" << "\n";
-        cout << "2) Salir" << "\n";
-        cout << "--------------" << "\n";
+        cout << "------------------" << "\n";
+        cout << "| Menu principal |" << "\n";
+        cout << "------------------" << "\n";
+        cout << "| 1) Ejercicios  |" << "\n";
+        cout << "| 2) Salir       |" << "\n";
+        cout << "------------------" << "\n";
         cout << "Seleccione una opcion: ";
         cin >> opcion;
         Menu::borrar_pantalla();
